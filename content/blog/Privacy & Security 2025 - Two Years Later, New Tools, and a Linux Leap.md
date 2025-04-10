@@ -1,6 +1,6 @@
 ---
 title: "Privacy & Security 2025: Two Years Later, New Tools, and a Linux Leap"
-date: 2025-03-07
+date: 2025-03-10
 author: Matteo De Venuto
 draft: false
 cover:
