@@ -6,8 +6,17 @@
     <description>Recent content on Matteo De Venuto</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privacy &amp; Security 2025: Two Years Later, New Tools, and a Linux Leap</title>
+      <link>http://localhost:1313/blog/privacy--security-2025---two-years-later-new-tools-and-a-linux-leap/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/privacy--security-2025---two-years-later-new-tools-and-a-linux-leap/</guid>
+      <description>&lt;p&gt;It’s been a little over two years since my last blog post about my privacy and digital security journey, which you can find &lt;a href=&#34;https://matteodevenuto.com/blog/my-privacy-and-digital-security-journey...-so-far-/&#34;&gt;here&lt;/a&gt;. A lot has changed and evolved in that time, so I figured it’s time for an update.&lt;/p&gt;
+&lt;h3 id=&#34;hardware-updates&#34;&gt;Hardware Updates&lt;/h3&gt;
+&lt;p&gt;Starting with hardware, I’m still using an iPhone as my primary mobile device, but that’s likely not going to last much longer. I’ll dive into the details in a future blog post once I make the switch. As I mentioned in my previous post, a &lt;a href=&#34;https://store.google.com/product/pixel_phone&#34;&gt;Google Pixel&lt;/a&gt; running &lt;a href=&#34;https://grapheneos.org/&#34;&gt;GrapheneOS&lt;/a&gt; remains the gold standard for privacy-focused mobile setups, and that’s where I’m headed in the near future. Good tutorial &lt;a href=&#34;https://www.youtube.com/watch?v=Zo9qHqTDcgM&#34;&gt;here&lt;/a&gt; if you are interested.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My Privacy and Digital Security Journey... So Far !</title>
       <link>http://localhost:1313/blog/my-privacy-and-digital-security-journey...-so-far-/</link>
