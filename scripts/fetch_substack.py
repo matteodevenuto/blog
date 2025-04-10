@@ -3,6 +3,7 @@ import os
 from datetime import datetime
 import html
 import requests
+from bs4 import BeautifulSoup
 
 RSS_URL = "https://matteodevenuto.substack.com/feed"
 OUTPUT_DIR = "content/blog/"
@@ -10,7 +11,6 @@ PROXY_URL = "https://api.allorigins.win/get?url="
 
 def fetch_feed_with_proxy(url):
     try:
-        # Use proxy to fetch the RSS feed
         proxy_url = f"{PROXY_URL}{url}"
         response = requests.get(proxy_url)
         print(f"Proxy HTTP Status: {response.status_code}")
@@ -30,6 +30,13 @@ def fetch_feed_with_proxy(url):
         print(f"Proxy request error: {e}")
         return None
 
+def clean_content(html_content):
+    soup = BeautifulSoup(html_content, 'html.parser')
+    # Remove Substack's image interaction divs
+    for div in soup.find_all('div', class_='image-link-expand'):
+        div.decompose()
+    return str(soup)
+
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 feed = fetch_feed_with_proxy(RSS_URL)
@@ -43,7 +50,8 @@ else:
             title = html.unescape(entry.title)
             slug = entry.link.split('/')[-1]
             date = datetime.strptime(entry.published, "%a, %d %b %Y %H:%M:%S GMT")
-            content = entry.content[0].value if 'content' in entry else entry.summary
+            raw_content = entry.content[0].value if 'content' in entry else entry.summary
+            content = clean_content(raw_content)
 
             frontmatter = f"""---
 title: "{title}"

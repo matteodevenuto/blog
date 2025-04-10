@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Blogs | Matteo De Venuto</title>
+<title>Coming soon | Matteo De Venuto</title>
 <meta name="keywords" content="">
-<meta name="description" content="Blogs - Matteo De Venuto">
+<meta name="description" content="This is Matteo&#8217;s Substack.Subscribe now">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/blog/">
+<link rel="canonical" href="http://localhost:1313/blog/2023-08-07-coming-soon/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,8 +18,7 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/2023-08-07-coming-soon/">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,7 +58,7 @@
 </noscript>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -102,51 +101,26 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    Blogs
-  </h1>
-</header>
+<main class="main">
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Test post
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>This is my test post with a severance photo
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-04-10 09:19:21 +0000 UTC'>April 10, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Test post" href="http://localhost:1313/blog/2025-04-10-test-post/"></a>
-</article>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Coming soon
+    </h1>
+    <div class="post-meta"><span title='2023-08-07 15:21:36 +0000 UTC'>August 7, 2023</span>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Coming soon
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>This is Matteo’s Substack.
-Subscribe now
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-08-07 15:21:36 +0000 UTC'>August 7, 2023</span></footer>
-  <a class="entry-link" aria-label="post link to Coming soon" href="http://localhost:1313/blog/2023-08-07-coming-soon/"></a>
-</article>
+</div>
+  </header> 
+  <div class="post-content"><p>This is Matteo&#8217;s Substack.</p><p class="button-wrapper"><a class="button primary" href="https://matteodevenuto.substack.com/subscribe?"><span>Subscribe now</span></a></p>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>test
-</p>
   </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to " href="http://localhost:1313/blog/test/"></a>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
 </article>
     </main>
     
@@ -218,6 +192,53 @@ Subscribe now
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
