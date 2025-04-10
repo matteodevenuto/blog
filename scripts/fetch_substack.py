@@ -2,13 +2,26 @@ import feedparser
 import os
 from datetime import datetime
 import html
+import requests
 
 RSS_URL = "https://matteodevenuto.substack.com/feed"
 OUTPUT_DIR = "content/blog/"
 
+# Custom feedparser with User-Agent
+def fetch_feed_with_headers(url):
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    }
+    response = requests.get(url, headers=headers)
+    if response.status_code == 200:
+        return feedparser.parse(response.content)
+    else:
+        print(f"Failed to fetch feed: Status {response.status_code}")
+        return feedparser.parse("")
+
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-feed = feedparser.parse(RSS_URL)
+feed = fetch_feed_with_headers(RSS_URL)
 print(f"Feed status: {feed.status}")
 print(f"Number of entries: {len(feed.entries)}")
 
@@ -17,7 +30,6 @@ for entry in feed.entries:
     try:
         title = html.unescape(entry.title)
         slug = entry.link.split('/')[-1]
-        # Handle GMT date without %z
         date = datetime.strptime(entry.published, "%a, %d %b %Y %H:%M:%S GMT")
         content = entry.content[0].value if 'content' in entry else entry.summary
 
