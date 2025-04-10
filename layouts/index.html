@@ -1,0 +1,21 @@
+{{ define "main" }}
+{{ if .Site.Params.profileMode.enabled }}
+  {{ partial "index_profile.html" . }}
+{{ else }}
+  <!-- Standard homepage content -->
+{{ end }}
+{{ end }}
+
+{{ define "head" }}
+<!-- Base metadata from theme -->
+{{ partial "head.html" . }}
+<!-- Custom metadata for X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Site.Title }}">
+<meta name="twitter:description" content="Matteo De Venuto’s blog">
+<meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1646606686172467202/oX95Ekb4_400x400.jpg">
+<meta property="og:title" content="{{ .Site.Title }}">
+<meta property="og:description" content="Matteo De Venuto’s blog">
+<meta property="og:image" content="https://pbs.twimg.com/profile_images/1646606686172467202/oX95Ekb4_400x400.jpg">
+<meta property="og:url" content="https://matteodevenuto.com/">
+{{ end }}
