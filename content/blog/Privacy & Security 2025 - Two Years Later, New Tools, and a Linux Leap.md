@@ -39,6 +39,6 @@ The rest of my setup has largely stayed consistent—at least until I switch pho
 
 ### New Resources
 
-One book I’ve recently started digging into is [_This Is How They Tell Me the World Ends_](https://www.amazon.com/This-They-Tell-World-Ends/dp/1635578493) by [Nicole Perlroth](https://www.nicoleperlroth.com/). It’s a fascinating read that dives into data brokers, cybersecurity, and some wild stories from the frontlines of the digital world—highly recommended.
+One book I’ve recently started digging into is [_This Is How They Tell Me the World Ends_](https://www.amazon.com/This-They-Tell-World-Ends/dp/1635578493) by [Nicole Perlroth](https://www.nicoleperlroth.com/). It’s a fascinating read that dives into zero-day brokers, cybersecurity, and some wild stories from the frontlines of the digital world—highly recommended.
 
-I’m also obsessed with the [Darknet Diaries](https://darknetdiaries.com/) podcast by [Jack Rhysider](https://x.com/jackrhysider). If you’re into tech and privacy, it’s a must-listen. There’s even an episode featuring Nicole Perlroth that ties in perfectly with the data broker theme—check it out [here](https://darknetdiaries.com/episode/98/).
+I’m also obsessed with the [Darknet Diaries](https://darknetdiaries.com/) podcast by [Jack Rhysider](https://x.com/jackrhysider). If you’re into tech and privacy, it’s a must-listen. There’s even an episode featuring Nicole Perlroth that talks about the zero-day brokers—check it out [here](https://darknetdiaries.com/episode/98/).
