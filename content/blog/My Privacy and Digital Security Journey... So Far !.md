@@ -3,8 +3,9 @@ title: "My Privacy and Digital Security Journey... So Far !"
 date: 2023-01-13
 author: "Matteo De Venuto"
 draft: false
+cover:
+  image: "https://images.unsplash.com/photo-1548092372-0d1bd40894a3?fm=jpg&amp;q=60&amp;w=3000&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ---
-<img src="https://images.unsplash.com/photo-1548092372-0d1bd40894a3?fm=jpg&amp;q=60&amp;w=3000&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="closeup photo of turned-on blue and white laptop computer"/>
 
 In today's digital age, protecting our personal information and digital security is more important than ever. As we rely more and more on technology for our daily tasks and communication, it's crucial to take steps to safeguard our information from potential threats. In this post, I'll be sharing my journey towards improving my privacy and digital security and the various components that I've incorporated.
 
