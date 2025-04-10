@@ -21,26 +21,7 @@
     </a>
     {{- end }}
     {{- end }}
-  </h1><div id="custom-substack-embed"></div>
-<script>
-  window.CustomSubstackWidget = {
-    substackUrl: "matteodevenuto.substack.com",
-    placeholder: "example@gmail.com",
-    buttonText: "Subscribe",
-    theme: "custom",
-    colors: {
-      primary: "#000000",
-      input: "#1D1E20",
-      email: "#FFFFFF",
-      text: "#FFFFFF",
-    },
-
-    // Go to substackapi.com to unlock custom redirect
-
-  };
-</script>
-<script src="https://substackapi.com/widget.js" async></script>
-
+  </h1>
   {{- if .Description }}
   <div class="post-description">
     {{ .Description | markdownify }}
