@@ -2,7 +2,7 @@ name: Sync Substack Posts
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # Runs every 5 minutes
+    - cron: "0 */2 * * *"  # Runs every 2 hours
   workflow_dispatch:
 
 permissions:
@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: "3.x"
       - name: Install Python dependencies
-        run: pip install feedparser requests  # Added requests
+        run: pip install feedparser requests beautifulsoup4  # Added beautifulsoup4
       - name: Fetch Substack posts
         run: python scripts/fetch_substack.py
       - name: Commit new posts
@@ -27,5 +27,9 @@ jobs:
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
           git add content/blog/*
-          git commit -m "Sync Substack posts" || echo "No changes"
-          git push origin master
+          if git diff-index --quiet HEAD --; then
+            echo "No new posts to commit"
+          else
+            git commit -m "Sync Substack posts"
+            git push origin main  # Replace with your branch
+          fi
