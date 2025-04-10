@@ -6,26 +6,33 @@ import requests
 
 RSS_URL = "https://matteodevenuto.substack.com/feed"
 OUTPUT_DIR = "content/blog/"
+PROXY_URL = "https://api.allorigins.win/get?url="
 
-def fetch_feed_with_headers(url):
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-    }
+def fetch_feed_with_proxy(url):
     try:
-        response = requests.get(url, headers=headers)
-        print(f"HTTP Status: {response.status_code}")
+        # Use proxy to fetch the RSS feed
+        proxy_url = f"{PROXY_URL}{url}"
+        response = requests.get(proxy_url)
+        print(f"Proxy HTTP Status: {response.status_code}")
         if response.status_code == 200:
-            return feedparser.parse(response.content)
+            data = response.json()
+            if 'contents' in data:
+                feed = feedparser.parse(data['contents'])
+                print(f"Feed fetched successfully, entries: {len(feed.entries)}")
+                return feed
+            else:
+                print("No 'contents' in proxy response")
+                return None
         else:
-            print(f"Failed to fetch feed: Status {response.status_code}")
+            print(f"Proxy failed: Status {response.status_code}")
             return None
     except Exception as e:
-        print(f"Request error: {e}")
+        print(f"Proxy request error: {e}")
         return None
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-feed = fetch_feed_with_headers(RSS_URL)
+feed = fetch_feed_with_proxy(RSS_URL)
 if feed is None or not hasattr(feed, 'entries'):
     print("No valid feed data retrieved. Exiting.")
 else:
