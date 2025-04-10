@@ -30,3 +30,8 @@ params:
       url: "https://youtube.com/matteodevenuto"
     - name: "email"
       url: "mailto:blog@matteodevenuto.com"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # Allow raw HTML
