@@ -50,4 +50,3 @@ For those who are interested in learning more about the impact of surveillance o
 
 "Privacy, Security & OSINT" podcast with Michael Bazzell is a great resource for those $ho are interested in learning more about the intersection of privacy, security, and OSINT (Open-Source Intelligence). It's one of my favorite podcasts at the moment.
 
-<iframe src="https://matteodevenuto.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
