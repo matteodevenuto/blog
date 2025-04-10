@@ -6,15 +6,15 @@
     <description>Recent content on Matteo De Venuto</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Aug 2023 15:21:36 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Coming soon</title>
-      <link>http://localhost:1313/blog/2023-08-07-coming-soon/</link>
-      <pubDate>Mon, 07 Aug 2023 15:21:36 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2023-08-07-coming-soon/</guid>
-      <description>&lt;p&gt;This is Matteo&amp;#8217;s Substack.&lt;/p&gt;&lt;p class=&#34;button-wrapper&#34;&gt;&lt;a class=&#34;button primary&#34; href=&#34;https://matteodevenuto.substack.com/subscribe?&#34;&gt;&lt;span&gt;Subscribe now&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;iframe src=&#34;https://matteodevenuto.substack.com/embed&#34; width=&#34;480&#34; height=&#34;320&#34; style=&#34;border:1px solid #EEE; background:black;&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;&gt;&lt;/iframe&gt;</description>
+      <title>My Privacy and Digital Security Journey... So Far !</title>
+      <link>http://localhost:1313/blog/my-privacy-and-digital-security-journey...-so-far-/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/my-privacy-and-digital-security-journey...-so-far-/</guid>
+      <description>&lt;p&gt;In today&amp;rsquo;s digital age, protecting our personal information and digital security is more important than ever. As we rely more and more on technology for our daily tasks and communication, it&amp;rsquo;s crucial to take steps to safeguard our information from potential threats. In this post, I&amp;rsquo;ll be sharing my journey towards improving my privacy and digital security and the various components that I&amp;rsquo;ve incorporated.&lt;/p&gt;
+&lt;p&gt;First, let&amp;rsquo;s start with the hardware components. The devices we use on a daily basis such as our phones and computers are the foundation of our digital lives. I use an iPhone with iOS as my primary phone, and I have turned off all the iCloud functions except Find My. If I would still be using iCloud features, I would recommend turning on Advanced Data Protection (which is the new end-to-end encrypted feature for some iCloud services), unfortunately it is not yet available in my region The more I dive deep into privacy, the more I want to move to a Google Pixel with GrapheneOS, as it is a more secure and open-source option. GrapheneOS is built on top of the Android Open Source Project, with additional privacy and security features such as the ability to run apps in a sandboxed environment, and the ability to easily and quickly wipe the device of all personal data.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
