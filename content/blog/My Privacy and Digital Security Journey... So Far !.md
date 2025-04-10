@@ -4,6 +4,7 @@ date: 2023-01-13
 author: "Matteo De Venuto"
 draft: false
 ---
+<img src="https://images.unsplash.com/photo-1548092372-0d1bd40894a3?fm=jpg&amp;q=60&amp;w=3000&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="closeup photo of turned-on blue and white laptop computer"/>
 
 In today's digital age, protecting our personal information and digital security is more important than ever. As we rely more and more on technology for our daily tasks and communication, it's crucial to take steps to safeguard our information from potential threats. In this post, I'll be sharing my journey towards improving my privacy and digital security and the various components that I've incorporated.
 
@@ -33,7 +34,6 @@ It's important to remember that this is a journey, and not a destination. As tec
 
 In summary, my privacy and digital security journey has been an ongoing process, but by taking a step-by-step approach and constantly researching and implementing new tools and techniques, I am able to take control of my digital life and protect myself from potential threats.
 
-
 ## Resources 
 
 In addition to the steps and tools I have discussed in this blog post, there are also a number of resources available for those who are interested in learning more about privacy and digital security.
@@ -48,4 +48,6 @@ For those who are interested in learning more about the impact of surveillance o
 
 "The Art of Invisibility" by Kevin Mitnick is a great resource for those who want to learn more about the techniques and tools used by experts to maintain their privacy and security in the digital age.
 
-"Privacy, Security & OSINT" podcast with Michael Bazzell is a great resource for those who are interested in learning more about the intersection of privacy, security, and OSINT (Open-Source Intelligence). It's one of my favorite podcasts at the moment.
+"Privacy, Security & OSINT" podcast with Michael Bazzell is a great resource for those $ho are interested in learning more about the intersection of privacy, security, and OSINT (Open-Source Intelligence). It's one of my favorite podcasts at the moment.
+
+<iframe src="https://matteodevenuto.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
