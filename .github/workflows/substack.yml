@@ -6,7 +6,7 @@ on:
   workflow_dispatch:  # Manual trigger
 
 permissions:
-  contents: write  # Needed to commit to repo
+  contents: write  # Needed to commit
 
 jobs:
   sync:
@@ -15,58 +15,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch and Sync Substack Posts
-        uses: actions/github-script@v7
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          script: |
-            const fs = require('fs').promises;
-            const path = require('path');
-            const fetch = require('node-fetch');
+          python-version: "3.x"
 
-            // Substack RSS feed URL
-            const rssUrl = 'https://matteodevenuto.substack.com/feed';
-            // Fetch RSS feed
-            const response = await fetch(rssUrl);
-            const rssText = await response.text();
+      - name: Install Python dependencies
+        run: pip install feedparser
 
-            // Simple XML parsing (using regex for brevity; could use xml2js for robustness)
-            const items = rssText.match(/<item>[\s\S]*?<\/item>/g) || [];
-            const outputDir = 'content/blog';
-            await fs.mkdir(outputDir, { recursive: true });
-
-            for (const item of items) {
-              const titleMatch = item.match(/<title>(.*?)<\/title>/);
-              const linkMatch = item.match(/<link>(.*?)<\/link>/);
-              const dateMatch = item.match(/<pubDate>(.*?)<\/pubDate>/);
-              const contentMatch = item.match(/<content:encoded><!\[CDATA\[(.*?)\]\]><\/content:encoded>/s) || 
-                                 item.match(/<description>(.*?)<\/description>/s);
-
-              if (!titleMatch || !linkMatch || !dateMatch || !contentMatch) continue;
-
-              const title = titleMatch[1].replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
-              const slug = linkMatch[1].split('/').pop();
-              const date = new Date(dateMatch[1]).toISOString();
-              const content = contentMatch[1].replace(/<!\[CDATA\[(.*?)\]\]>/s, '$1');
-
-              const frontmatter = `---
-title: "${title}"
-date: ${date}
-author: "Matteo De Venuto"
-draft: false
----
-`;
-              const filename = `${date.split('T')[0]}-${slug}.md`;
-              const filepath = path.join(outputDir, filename);
-
-              // Write file if it doesn’t exist
-              try {
-                await fs.access(filepath);
-                console.log(`Skipped ${filename} (already exists)`);
-              } catch {
-                await fs.writeFile(filepath, frontmatter + content);
-                console.log(`Created ${filename}`);
-              }
-            }
+      - name: Fetch Substack posts
+        run: python scripts/fetch_substack.py
 
       - name: Commit new posts
         run: |
