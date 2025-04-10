@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 RSS_URL = "https://matteodevenuto.substack.com/feed"
 OUTPUT_DIR = "content/blog/"
-PROXY_URL = "https://api.allorigins.win/get?url="
+PROXY_URL = "https://corsproxy.io/?"  # New proxy
 
 def fetch_feed_with_proxy(url):
     try:
@@ -15,14 +15,10 @@ def fetch_feed_with_proxy(url):
         response = requests.get(proxy_url)
         print(f"Proxy HTTP Status: {response.status_code}")
         if response.status_code == 200:
-            data = response.json()
-            if 'contents' in data:
-                feed = feedparser.parse(data['contents'])
-                print(f"Feed fetched successfully, entries: {len(feed.entries)}")
-                return feed
-            else:
-                print("No 'contents' in proxy response")
-                return None
+            # corsproxy.io returns the feed directly as text, not JSON
+            feed = feedparser.parse(response.text)
+            print(f"Feed fetched successfully, entries: {len(feed.entries)}")
+            return feed
         else:
             print(f"Proxy failed: Status {response.status_code}")
             return None
@@ -32,7 +28,6 @@ def fetch_feed_with_proxy(url):
 
 def clean_content(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
-    # Remove Substack's image interaction divs
     for div in soup.find_all('div', class_='image-link-expand'):
         div.decompose()
     return str(soup)
