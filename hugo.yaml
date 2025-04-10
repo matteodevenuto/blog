@@ -4,6 +4,9 @@ languageCode: en-us
 theme: ["PaperMod"]
 
  
+googleAnalytics: G-GBKQVNR3LG
+
+
 params:
   profileMode:
     enabled: true
