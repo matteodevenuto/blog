@@ -6,6 +6,18 @@ theme: ["PaperMod"]
  
 googleAnalytics: G-HTCFBM9VNG
 
+outputs:
+  home: ["HTML"]
+  section: ["HTML", "RSS"]
+
+outputFormats:
+  RSS:
+    mediatype: "application/rss+xml"
+    baseName: "rss"
+
+permalinks:
+  blog: "/blog/:slug"
+  rss: "blog/rss"
 
 params:
   profileMode:
@@ -39,4 +51,4 @@ params:
     - name: "email"
       url: "mailto:blog@matteodevenuto.com"
     - name: "rss"
-      url: "https://matteodevenuto.com/blog/index.xml"
+      url: "/blog/rss.xml"

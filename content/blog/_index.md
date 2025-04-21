@@ -1,3 +1,7 @@
 ---
-title: "Blog"
+title: Blog
+outputs:
+  - HTML
+  - RSS
+url: /blog
 ---
