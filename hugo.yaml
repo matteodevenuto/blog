@@ -38,5 +38,5 @@ params:
       url: "https://youtube.com/matteodevenuto"
     - name: "email"
       url: "mailto:blog@matteodevenuto.com"
-     - name: "rss"
+    - name: "rss"
       url: "https://matteodevenuto.com/blog/index.xml"
