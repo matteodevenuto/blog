@@ -51,4 +51,4 @@ params:
     - name: "email"
       url: "mailto:blog@matteodevenuto.com"
     - name: "rss"
-      url: "/blog/rss.xml"
+      url: "https://matteodevenuto.substack.com/feed"
