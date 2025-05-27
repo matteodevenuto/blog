@@ -23,7 +23,7 @@ params:
   profileMode:
     enabled: true
     title: "Matteo De Venuto" # optional default will be site title
-    imageUrl: "https://pbs.twimg.com/profile_images/1646606686172467202/oX95Ekb4_400x400.jpg" # optional
+    imageUrl: "/images/profile.jpg" # optional
     imageTitle: "Profile Picture" # optional
     imageWidth: 220 # custom size
     imageHeight: 220 # custom size
@@ -37,7 +37,7 @@ params:
   ShowFullTextinRSS: true
 
   assets:
-    favicon: "https://pbs.twimg.com/profile_images/1646606686172467202/oX95Ekb4_400x400.jpg"
+    favicon: "/images/favicon.ico"
 
   socialIcons:
     - name: "X"
