@@ -37,7 +37,7 @@ params:
   ShowFullTextinRSS: true
 
   assets:
-    favicon: "/images/favicon.ico"
+    favicon: "/images/favicon.png"
 
   socialIcons:
     - name: "X"
