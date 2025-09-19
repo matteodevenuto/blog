@@ -3,8 +3,9 @@ title: "Matteo De Venuto"
 languageCode: en-us
 theme: ["PaperMod"]
 
- 
-googleAnalytics: G-HTCFBM9VNG
+services:
+  googleAnalytics:
+    id: "G-HTCFBM9VNG"
 
 outputs:
   home: ["HTML"]

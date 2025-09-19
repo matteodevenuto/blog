@@ -162,9 +162,9 @@
 
 {{- /* Misc */}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
-{{- partial "_internal/google_analytics.html" . }}
-{{- partial "partials/templates/opengraph.html" . }}
-{{- partial "partials/templates/twitter_cards.html" . }}
-{{- partial "partials/templates/schema_json.html" . }}
+{{- partial "google_analytics.html" . }}
+{{- partial "templates/opengraph.html" . }}
+{{- partial "templates/twitter_cards.html" . }}
+{{- partial "templates/schema_json.html" . }}
 {{- end -}}
 
