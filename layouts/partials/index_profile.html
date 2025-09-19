@@ -33,28 +33,14 @@
         <h1>{{ .title | default site.Title | markdownify }}</h1>
         <span>{{ .subtitle | markdownify }}</span>
         {{- partial "social_icons.html" -}}
+ 
+<!-- Subscribe embed code -->
+<div data-supascribe-embed-id="498530481456" data-supascribe-subscribe></div>
 
-<div id="custom-substack-embed"></div>
-<script>
-  window.CustomSubstackWidget = {
-    substackUrl: "matteodevenuto.substack.com",
-    placeholder: "example@gmail.com",
-    buttonText: "Subscribe",
-    theme: "custom",
-    colors: {
-      primary: "#000000",
-      input: "#1D1E20",
-      email: "#FFFFFF",
-      text: "#FFFFFF",
-    },
+<!-- Supascribe Script -->
+<script src="https://js.supascribe.com/v1/loader/uqpboRINOWYAWYNleCwLvImv4b33.js" async></script>
 
-    // Go to substackapi.com to unlock custom redirect
-
-  };
-</script>
-<script src="https://substackapi.com/widget.js" async></script>
-
-        {{- with .buttons }}
+    {{- with .buttons }}
         <div class="buttons">
             {{- range . }}
             <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
